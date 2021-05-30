@@ -1,0 +1,16 @@
+<div class="header">
+	<div routerLink="/" class="header__btn">
+		<span class="header__arrow"></span>
+		<span class="header__text">Back</span>
+	</div>
+	<img src="assets/set.svg" alt="" class="header__set-img" />
+</div>
+
+<div class="title">
+	<div class="title__text">Today</div>
+	<div class="title__date">Sep,12</div>
+</div>
+
+<div class="detail-items">
+	<app-weather-detail-item *ngFor="let temp of tempData" [temp]="temp"></app-weather-detail-item>
+</div>

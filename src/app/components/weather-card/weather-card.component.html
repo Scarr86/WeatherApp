@@ -1,0 +1,21 @@
+<div (click)="goDetail()" class="weather-card">
+	<div class="weather-card__title">Сегодня, {{today | date:'d  LLLL'}}</div>
+	<div [Ghost]="isGhost" class="weather-card__body">
+		<div class="temp">{{temp | number:"1.0-0"}}°</div>
+		<div class="temp-desc">
+			<span>{{desc}}</span>
+		</div>
+	</div>
+	<div [Ghost]="isGhost" class="weather-card__footer">
+		<div class="footer-line">
+			<span class="weather-icon wind-icon">Wind</span>
+			<span class="driver">|</span>
+			<span>{{wind}} km/h</span>
+		</div>
+		<div class="footer-line">
+			<span class="weather-icon hum-icon">Hum</span>
+			<span class="driver">|</span>
+			<span>{{hum}} %</span>
+		</div>
+	</div>
+</div>

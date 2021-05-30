@@ -1,0 +1,8 @@
+<div class="select" [class.is-open]="isOpen">
+	<div class="select__text cheveron" (click)="toggle()">{{city}}</div>
+	<div class="select__options">
+		<ul>
+			<li class="option" [class.selected]="i === selectIndex" *ngFor="let city of cities; let i = index" (click)="select(i)">{{city}}</li>
+		</ul>
+	</div>
+</div>

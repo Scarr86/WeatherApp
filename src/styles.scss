@@ -1,1 +1,74 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    box-sizing: border-box;
+	font-size: 18px;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    min-height: 100% !important;
+    // height: 100%;
+}
+
+body {
+    background: linear-gradient(192.05deg, #47BFDF 0%, #4A91FF 100%);
+    font-family: 'Overpass', sans-serif;
+    margin: 0;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    display: block;
+}
+
+$lightblue: #b3d7ff;
+$deepblue: rgb(0, 137, 191);
+
+@keyframes ghost-lines {
+
+    // 0% { background-position: -100px; }
+    // 40% { background-position: 50px; }
+    // 100% { background-position: 100px; }
+    0% {
+        opacity: .9;
+        filter: blur(1px);
+    }
+
+    100% {
+        opacity: .3;
+        filter: blur(6px);
+    }
+
+}
+
+// @mixin animate-ghost-line($width) {
+// 	// background: linear-gradient(192.05deg, #47BFDF 0%, #4A91FF 100%);
+// 	background: linear-gradient(90deg, rgba(#fff, 0) 0, rgba($lightblue, 0.66) $width/2, rgba(255, 255, 255, 0)  $width);
+// 	animation: ghost-lines 1000ms infinite linear;
+//   }
+@mixin animate-ghost-line {
+    animation: ghost-lines 700ms infinite linear alternate;
+
+}
+
+.ghost {
+    // font-size: 0;
+    // width: 200px;
+    // filter: blur(6px);
+    animation: ghost-lines 500ms infinite linear alternate;
+    // background-image: none;
+    // @include animate-ghost-line(200px);
+}

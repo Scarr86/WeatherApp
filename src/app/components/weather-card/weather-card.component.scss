@@ -1,0 +1,92 @@
+.weather-card {
+	&:hover{
+		box-shadow:		0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12)
+	}
+    margin: 0 auto;
+    max-width: 300px;
+	cursor: pointer;
+	
+    //width: 100%;
+    padding: 12px 12px 1px;
+    border-radius: 14px;
+    border: 2px solid rgba(191, 191, 191, 0.7);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
+    text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.1);
+    font-size: .75rem;
+    text-align: center;
+    font-weight: 400;
+	user-select: none; 
+
+
+    &__title {
+        margin-bottom: .5rem;
+    }
+
+    &__body {
+        margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__footer {
+        margin: 0 2rem;
+        text-align: left;
+        white-space: nowrap;
+    }
+}
+
+.temp {
+    font-size: 5rem;
+    // line-height: 107px;
+    text-shadow: -14px 14px 10px rgb(0, 0, 0, .2);
+
+}
+
+.temp-desc {
+    font-size: 1rem;
+}
+
+.footer-line {
+    display: flex;
+    margin-bottom: 11px;
+
+    &>* {
+        width: 100%;
+    }
+}
+
+.weather-icon {
+    position: relative;
+    padding-left: 30px;
+
+    &::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        left: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.wind-icon::before {
+    background-image: url("../../../assets/wind-icon.svg");
+}
+
+.hum-icon::before {
+    background-image: url("../../../assets/hum-icon.svg");
+}
+
+.driver {
+    font-size: 0.45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.capitolize {
+    text-transform: capitalize;
+}

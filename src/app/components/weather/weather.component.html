@@ -1,0 +1,25 @@
+<div class="header">
+	<div class="header__item">
+		<img src="assets/location.svg" alt="location-icon" />
+	</div>
+	<div class="header__item">
+		<app-select (place)="place = $event"></app-select>
+		<!-- <span class="city-name cheveron-down">{{sity}}</span> -->
+	</div>
+	<div class="header__item">
+		<img src="../assets/has-notify.svg" alt="" />
+	</div>
+</div>
+<div class="main">
+
+	<img [Ghost]="isGhost" class="weather-img" src="../assets/weather-icon.svg" alt="" />
+	<!-- <app-weather-card class="center border" [weatherState]="nws.state$ | async"></app-weather-card> -->
+	<app-weather-card  [weatherState]="nws.state$ | async"></app-weather-card>
+	<div class=" d-flex">
+		<!-- <app-weather-card class="item" class="center border"></app-weather-card>
+		<app-weather-card class="item" class="center border"></app-weather-card>
+		<app-weather-card class="item" class="center border"></app-weather-card>
+		<app-weather-card class="item" class="center border"></app-weather-card>
+		<app-weather-card class="item" class="center border"></app-weather-card> -->
+	</div>
+</div>
